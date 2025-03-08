@@ -1,0 +1,35 @@
+tasks.register("calc") {
+    // Capture the input properties early (during configuration phase)
+    def num1 = project.findProperty("num1") ?: "0"
+    def num2 = project.findProperty("num2") ?: "0"
+    def operation = project.findProperty("operation") ?: "add"
+
+    doLast {
+        try {
+            def n1 = num1.toBigDecimal()
+            def n2 = num2.toBigDecimal()
+            def result
+
+            switch (operation) {
+                case "add": result = n1 + n2; break
+                case "subtract": result = n1 - n2; break
+                case "multiply": result = n1 * n2; break
+                case "divide":
+                    if (n2 == 0) {
+                        println "Error: Division by zero is a big no-no!"
+                        return
+                    }
+                    result = n1 / n2
+                    break
+                default:
+                    println "Invalid operation! Use: add, subtract, multiply, divide."
+                    return
+            }
+
+            println "Result of $n1 $operation $n2 = $result"
+        } catch (Exception e) {
+            println "Oops! Invalid number format. Please enter valid numbers."
+        }
+    }
+}
+"// User1_Gradle_project updated the Gradle task" 
