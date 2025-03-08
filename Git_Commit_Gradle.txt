@@ -1,0 +1,26 @@
+#Added user 1 commit
+git init
+git config user.name "User1_Gradle_project"
+git config --global user.email "user1@example.com"
+echo "// User1 added a comment" >> gradle calc
+git add .
+git commit -m "User1: Added new logic in build.gradle"
+
+#Added user 2 commit
+git config user.name "User2_Gradle_Project"
+git config user.email "user2@example.com"
+echo "// User2_Gradle_project updated the Gradle task" >> build.gradle
+git add .
+git commit -m "User2: Added new logic in build.gradle"
+
+#verify from console using below command
+git log --oneline --author="User1_Gradle_project"
+36752a5 - User1_Gradle_project: User1: Added new logic in build.gradle
+
+git log --oneline --author="User2_Gradle_Project"
+ea00c0b - User2_Gradle_Project: User2: Added new logic in build.gradle
+
+git log --pretty=format:"%h - %an: %s"
+ea00c0b - User2_Gradle_Project: User2: Added new logic in build.gradle
+36752a5 - User1_Gradle_project: User1: Added new logic in build.gradle
+
