@@ -33,3 +33,4 @@ tasks.register("calc") {
     }
 }
 "// User1_Gradle_project updated the Gradle task" 
+"// User2_Gradle_project updated the Gradle task" 
