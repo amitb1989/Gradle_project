@@ -31,5 +31,12 @@ tasks.register("calc") {
         }
     }
 }
+sonarqube {
+    properties {
+        property "sonar.projectKey", "Gradle_Project_Pipeline"  // Set your project name here
+        property "sonar.host.url", "http://localhost:9000"  // Change if different
+        property "sonar.token", System.getenv("SONAR_TOKEN")  // Secure token from Jenkins
+    }
+}
 "// User1_Gradle_project updated the Gradle task" 
 "// User2_Gradle_project updated the Gradle task"
