@@ -21,7 +21,7 @@ pipeline {
         stage('SonarQube Scan') {
             steps {
                 withSonarQubeEnv('LocalSonarQube') {
-                    bat 'gradlew.bat sonarqube'
+                   bat 'gradlew.bat sonar'
                 }
             }
         }
