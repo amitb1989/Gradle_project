@@ -38,6 +38,8 @@ sonar {
   properties {
     property "sonar.projectKey", "Gradle_Project_Pipeline"
     property "sonar.projectName", "Gradle_Project_Pipeline"
+    property "sonar.host.url", "http://localhost:9000"
+    property "sonar.login", project.findProperty("sonar.token") ?: "squ_dca4a565340f6e596554e56171cacf2192ee779b"
   }
 }
 "// User1_Gradle_project updated the Gradle task" 
