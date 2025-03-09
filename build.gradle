@@ -32,8 +32,7 @@ tasks.register("calc") {
         }
     }
 }
-// **Ensure duplicatesStrategy is set inside the jar task**
-tasks.named("jar") {
+tasks.withType(Jar).configureEach {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 "// User1_Gradle_project updated the Gradle task" 
