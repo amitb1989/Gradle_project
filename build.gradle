@@ -32,5 +32,8 @@ tasks.register("calc") {
         }
     }
 }
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
 "// User1_Gradle_project updated the Gradle task" 
 "// User2_Gradle_project updated the Gradle task" 
