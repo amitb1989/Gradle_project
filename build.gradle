@@ -32,7 +32,7 @@ tasks.register("calc") {
         }
     }
 }
-jar {
+tasks.withType(Jar).configureEach {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 "// User1_Gradle_project updated the Gradle task" 
