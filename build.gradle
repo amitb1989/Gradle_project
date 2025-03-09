@@ -1,7 +1,3 @@
-plugins {
-    id 'java'  // Ensure Java plugin is applied
-}
-
 tasks.register("calc") {
     def num1 = project.findProperty("num1") ?: "0"
     def num2 = project.findProperty("num2") ?: "0"
@@ -35,12 +31,5 @@ tasks.register("calc") {
         }
     }
 }
-
-// Apply duplicates strategy correctly
-tasks.withType(Jar).configureEach {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-}
-
-// Preserve user comments
 "// User1_Gradle_project updated the Gradle task" 
 "// User2_Gradle_project updated the Gradle task"
