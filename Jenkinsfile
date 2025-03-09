@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/amitb1989/Gradle_project.git'
+                checkout scm  // Merging node { stage('SCM') } logic
             }
         }
 
@@ -21,7 +21,7 @@ pipeline {
         stage('SonarQube Scan') {
             steps {
                 withSonarQubeEnv('LocalSonarQube') {
-                   bat 'gradlew.bat sonar'
+                    bat 'gradlew.bat sonar'
                 }
             }
         }
