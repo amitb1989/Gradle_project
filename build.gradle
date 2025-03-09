@@ -1,3 +1,6 @@
+plugins {
+  id "org.sonarqube" version "6.0.1.5171"
+}
 tasks.register("calc") {
     def num1 = project.findProperty("num1") ?: "0"
     def num2 = project.findProperty("num2") ?: "0"
@@ -31,10 +34,6 @@ tasks.register("calc") {
         }
     }
 }
-plugins {
-  id "org.sonarqube" version "6.0.1.5171"
-}
-
 sonar {
   properties {
     property "sonar.projectKey", "Gradle_Project_Pipeline"
