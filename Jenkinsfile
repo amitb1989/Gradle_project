@@ -21,7 +21,7 @@ pipeline {
         stage('SonarQube Scan') {
             steps {
                  withSonarQubeEnv('LocalSonarQube') {
-                 bat 'gradlew.bat sonar -Dsonar.token=sqa_68b453c15906c076b4f0047e40bc64a7ec43015d'
+                 bat 'gradlew.bat sonar -Dsonar.token=squ_4e3cff0dde1de5dd0ab7aa1d3916f882647218d2'
                 }
             }
         }
